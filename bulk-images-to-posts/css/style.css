@@ -1,53 +1,40 @@
-/*
-Plugin Name: Bulk Images to Posts
-Plugin URI: http://www.mezzaninegold.com
-Description: Bulk upload images to create posts / custom posts with featured images.
-Version: 3.3
-Author: Mezzanine gold
-Author URI: http://mezzaninegold.com
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
+.bip-admin .bip-columns { display: grid; grid-template-columns: minmax(240px, 1fr) minmax(320px, 2fr); gap: 20px; }
+.bip-admin .postbox { min-width: 0; }
+.bip-admin .postbox h2 { padding: 12px; margin: 0; border-bottom: 1px solid #dcdcde; font-size: 14px; }
+.bip-admin .bip-images { align-self: start; }
+.bip-admin .categorychecklist { max-height: 450px; overflow: auto; }
+.bip-admin .categorychecklist ul { margin-left: 18px; }
+.bip-admin #bip-drop-area { position: relative; padding: 45px 20px; border: 3px dashed #8c8f94; text-align: center; }
+.bip-admin #bip-upload-results li { padding: 8px; border-bottom: 1px solid #dcdcde; overflow-wrap: anywhere; }
+.bip-admin .bip-error { color: #b32d2e; }
+@media (max-width: 782px) { .bip-admin .bip-columns { grid-template-columns: 1fr; } }
 
-@import url("grid.css");
-@import url("dropzone.css");
+.bip-admin #bip-upload-results li { display: flex; align-items: center; gap: 12px; padding: 12px 8px; margin: 0; }
+.bip-admin .bip-preview { display: block; flex: 0 0 64px; width: 64px; height: 64px; background: #f0f0f1; border-radius: 4px; overflow: hidden; }
+.bip-admin .bip-preview img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bip-admin .bip-result-details { min-width: 0; }
+.bip-admin .bip-result-title, .bip-admin .bip-status { display: block; }
+.bip-admin .bip-status { margin-top: 4px; }
+.bip-admin .bip-success .bip-status { color: #008a20; }
 
-.categorydiv div.tabs-panel, .customlinkdiv div.tabs-panel, .posttypediv div.tabs-panel, .taxonomydiv div.tabs-panel, .wp-tab-panel {
-	max-height: 100%;
-}
+.bip-admin .bip-progress { padding: 12px; min-height: 64px; overflow-wrap: anywhere; }
+.bip-admin .bip-progress span { display: block; margin-top: 4px; }
+.bip-admin .bip-row-actions { margin-top: 6px; color: #a7aaad; }
+.bip-admin #bip-error-list li { padding: 8px 0; overflow-wrap: anywhere; }
+.bip-admin [hidden] { display: none !important; }
 
-.postbox { min-width: 100px; }
-.buttonbox { margin-bottom: 10px;}
-p.uncheck { float: left; margin: 0 0 10px; }
-p.submit { float: right; margin: 0 0 10px; padding: 0; }
-.submit input { padding: 0; }
-#the-dropped { border: 4px dashed #2ea2cc; margin:10px; min-height: 310px; }
+.bip-admin .bip-row-actions { opacity: 0; }
+.bip-admin #bip-upload-results li:hover .bip-row-actions,
+.bip-admin #bip-upload-results li:focus-within .bip-row-actions { opacity: 1; }
+.bip-admin #bip-upload-results li:hover { background: #f6f7f7; }
+@media (hover: none), (max-width: 782px) { .bip-admin .bip-row-actions { opacity: 1; } }
 
-.successModal {
+.bip-settings summary { cursor: pointer; padding: 14px; font-weight: 600; }
+.bip-settings-content { padding: 0 16px 12px; }
 
-}
+.bip-admin .bip-columns.bip-no-terms { grid-template-columns: minmax(0, 1fr); }
 
-.dz-message { color: #dfdfdf; }
-.upload-icon { font-size: 75px; height: 75px; width: 75px; color: #dfdfdf; }
-
-.categorydiv { clear: both;}
-
-.checkbox-container {}
-.checkbox-container label { display: block; }
-.checkbox-container ul {}
-.checkbox-container ul ul { list-style: none;  display: none;  }
-.checkbox-container ul { list-style: none;  display: block; }
-.checkbox-container input[type="checkbox"] {}
-
-.saved:before {
-    font-family: "dashicons";
-    content: "\f147";
-    float: right;
-    color: green;
-}
-.removed:before {
-    font-family: "dashicons";
-    content: "\f335";
-    float: right;
-    color: red;
-}
+.bip-settings-summary { background: #f6f7f7; padding: 12px; overflow-wrap: anywhere; }
+.bip-settings-summary p { margin: 6px 0 0; }
+.bip-completed-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-right: 12px; border-bottom: 1px solid #dcdcde; }
+.bip-admin .bip-completed-heading h2 { border-bottom: 0; }

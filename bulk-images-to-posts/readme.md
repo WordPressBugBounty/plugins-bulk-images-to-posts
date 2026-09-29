@@ -1,25 +1,11 @@
-This is a wordpress plugin.
-
 # Bulk Images to Posts
 
-Bulk upload images to create posts / custom posts with featured images.
+Version 4.1.1. Requires WordPress 6.0+ and PHP 7.4+.
 
-New posts are created using the file name of the image as the post title.
+Bulk upload images and automatically create one WordPress post per image, with featured images, titles and categories ready to go.
 
-You can select the post type and a taxonmy for uploading the images to.
+Drag and drop a batch of images into **Bulk > Uploader** to create a separate post for each image. Configure draft or published status, filename or metadata titles, existing taxonomy terms and optional images in post content under **Bulk > Uploader > Settings**.
 
+Supports posts, pages and existing public custom post types. New uploads only; existing Media Library items are not converted. Your theme controls the display of posts and featured images.
 
-
-## Options
-
-The options page allows you to switch between post types and select categories to be assigned.
-
-## Issues
-
-Contributions welcome.
-
-## Roadmap
-
-* Option for Taxonmies Repeater
-* Option for Published/Draft etc
-* Option for Tags
+See [readme.txt](readme.txt) for features, installation, FAQs and the changelog.

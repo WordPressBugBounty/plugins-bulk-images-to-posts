@@ -69,15 +69,15 @@ msgstr "Clique aqui"
 msgid "Images"
 msgstr "Imagens"
 
-#: includes/bip-dropzone.php:6
+#: includes/bip-uploader.php:6
 msgid "Drag and Drop images here or click to upload."
 msgstr "Arraste e solte imagens aqui ou clique para fazer upload"
 
-#: includes/bip-dropzone.php:83
+#: includes/bip-uploader.php:83
 msgid "There was an error uploading the image."
 msgstr "Houve um erro ao fazer upload da imagem."
 
-#: includes/bip-dropzone.php:86
+#: includes/bip-uploader.php:86
 msgid "Success"
 msgstr "Sucesso"
 
